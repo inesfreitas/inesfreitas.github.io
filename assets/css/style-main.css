@@ -1,0 +1,6 @@
+main{
+    background-color: #add8e6;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
