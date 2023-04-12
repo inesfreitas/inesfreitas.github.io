@@ -1,0 +1,13 @@
+footer{
+    background-color: $primary-color;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+footer p{
+    font-size: 14px;
+    color: $secondary-text-color;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
