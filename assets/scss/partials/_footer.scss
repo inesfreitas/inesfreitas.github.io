@@ -3,11 +3,10 @@ footer{
     height: 50px;
     display: flex;
     justify-content: center;
+    
+    p{
+        @include mainText;
+        @include textSmall;
+        color: $secondary-text-color;
+    }    
 }
-
-footer p{
-    font-size: 14px;
-    color: $secondary-text-color;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
