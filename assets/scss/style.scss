@@ -3,13 +3,13 @@
  "partials/colors",
  "partials/functions",
  "partials/mixins",
- "partials/header",
- "partials/layout",
- "partials/footer",
+ //"partials/header",
+ //"partials/layout",
+ //"partials/footer",
  "partials/animations"
  ;
 
- button.primary {
+ /*button.primary {
     border: 1px solid #f00;
     color: blue;
     padding: 6px 10px;
@@ -20,4 +20,4 @@
   button.secondary {
     @extend .primary;
     background: red;
-  }
+  }*/
