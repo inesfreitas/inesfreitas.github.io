@@ -4,91 +4,23 @@ main {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	background-color: #fff;
 	flex-grow: 1;
-	padding: 38px 20px;
-	max-width: 540px;
 	margin: 0 auto;
 	@media (min-width: $small) {
-		max-width: 100%;
-		padding: 30px;
 	}
 	@media (min-width: $large) {
-		max-width: 1130px;
 	}
 }
 
 body {
+	
+	background-color: $background-color;
 	display: flex;
 	flex-direction: column;
 	margin: 0px;
 	height: 100svh;
 }
 
-h1 {
-	@include mainText;
-	margin: 0px;
-	color: $primary-color;
-}
-
-p{
-	@include mainText;
-	@include textMedium;
-	margin-bottom: 30px;
-	text-align: center;
-}
 
 
-.column {
-	background: #90ee98;
-}
-
-.flex-grid {
-	width: 100%;
-}
-
-.column:not(:last-child) {
-	margin-bottom: 30px;
-}
-
-img {
-	max-width: 100%;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	object-fit: cover;
-}
-
-figure {
-	margin: 0;
-	height: 0;
-	position: relative;
-	background-color: $primary-color;
-	overflow: hidden;
-	padding-bottom: ratio(16, 9);
-}
-
-/*figure {
-	margin: 0;
-	height: 0;
-	position: relative;
-	background-color: $primary-color;
-	overflow: hidden;
-	aspect-ratio: 1 / 1;
-}*/
-
-@media (min-width: $small) {
-	.flex-grid {
-		display: flex;
-		flex-direction: row;
-		column-gap: 30px;
-	}
-	.column {
-		width: 33.3%;
-	}
-	.column:not(:last-child) {
-		margin-bottom: 0;
-	}
-
-}
 

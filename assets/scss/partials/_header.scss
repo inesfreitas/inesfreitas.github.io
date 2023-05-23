@@ -2,11 +2,18 @@ header{
     background-color: $primary-color;
     height: rem(50);
     display: flex;
-    justify-content: center;
+    align-items: center;
+	flex-direction: row;
+
 
     p{
         @include mainText;
         @include textSmall;
+        color: $secondary-text-color;
+        flex-grow: 1;
+    }
+
+    a{
         color: $secondary-text-color;
     }
 }
