@@ -19,8 +19,21 @@ body {
 	flex-direction: column;
 	margin: 0px;
 	height: 100svh;
+	&.work{
+		background-color: red;
+	}
+	&.contacts{
+		background-color: yellow;
+	}
+	&.home{
+		background-color: blue;
+	}
 }
 
+
+h1{
+ color: white;
+}
 
 
 
