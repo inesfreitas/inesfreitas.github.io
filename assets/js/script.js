@@ -22,3 +22,5 @@ for( var i = 0; i < anchor.length; i++){
     document.body.classList.add("home")
 }*/
 }
+
+

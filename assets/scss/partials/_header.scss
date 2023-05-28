@@ -1,42 +1,75 @@
 header{
-    padding: 0px 30px 0px 30px;
-    background-color: $background-color;
-    height: rem(90);
-    width: 95%;
-    display: flex;
-    align-items:first baseline;
-	flex-direction: row;
+    margin: 0 4% 0 4%;
 
-
-    h1{
-        @include mainText;
-        @include titleName-desktop;
-        color: $primary-color;
-        flex-grow: 1;
-    }
-
-
-    ul{
+    .container{
+        background-color: $background-color;
         display: flex;
-        li{
-            list-style: none;
-            margin: 10px;
-            a{
-                @include mainText;
-                @include textNav-desktop;
-                color: $primary-color;
-                text-decoration: none;
-                &.active{
-                    font-weight: bolder;
-                    //text-decoration: underline;
+        align-items:center;
+        flex-direction: row;
+        @media (min-width: $medium){
+            height: rem(90px);
+            align-items:first baseline;
+        }
+
+        h1{
+            @include mainText;
+            @include titleName-mobile;
+            color: $primary-color;
+            flex-grow: 1;
+            @media (min-width: $medium){
+                @include titleName-desktop;
+            }
+        }
+
+        .hamburger-menu{
+            width: 32px;
+            hr{
+                border: 2px solid $primary-color;
+                margin-top: 8px;
+            }
+            @media (min-width: $medium){
+                display: none;
+
+            }
+        }
+
+        nav{
+            display: none;
+            @media (min-width: $medium){
+                display: block;
+
+            }
+            ul{
+                display: flex;
+                li{
+                    list-style: none;
+                    margin: 10px;
+                    a{
+                        @include mainText;
+                        @include textNav-desktop;
+                        color: $primary-color;
+                        text-decoration: none;
+                        &.active{
+                            font-weight: bolder;
+                            //text-decoration: underline;
+                        }
+                    }
                 }
             }
         }
     }
 
+    hr{
+        border: 2.5px solid $primary-color;
+        margin: 0 auto 0 auto;
+        display: block;
+        @media (min-width: $large){
+            border: 1.6px solid $primary-color;
+        }
+     }
+
 }
 
-hr{
-    border: 1.6px solid $primary-color;
-    width: 95%;
- }
+
+
+

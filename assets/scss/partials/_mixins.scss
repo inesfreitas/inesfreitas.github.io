@@ -6,6 +6,24 @@
 
 //MOBILE TEXT
 
+@mixin textSmall-mobile{
+    font-size: rem(12px);
+}
+
+@mixin bodyText-mobile{
+    font-size: rem(14px);
+    line-height: 1.4;
+}
+
+@mixin title-mobile{
+    font-size: rem(24px);
+    font-weight: bold;
+}
+
+@mixin titleName-mobile {
+    font-size: rem(32px);
+    font-weight: bold;
+}
 
 //DESKTOP TEXT
 
@@ -25,7 +43,7 @@
 }
 
 @mixin textNav-desktop{
-    font-size: rem(28);
+    font-size: rem(26);
 }
 
 @mixin titleName-desktop {

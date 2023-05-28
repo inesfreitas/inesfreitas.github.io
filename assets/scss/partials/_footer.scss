@@ -1,12 +1,115 @@
 footer{
-    background-color: $primary-color;
-    height: 50px;
-    display: flex;
-    justify-content: center;
+
+    hr{
+        border: 0.6px solid $secondary-text-color;
+        margin-bottom: 30px;
+        width: 95%;
+    }
     
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        @media (min-width: $medium){
+            flex-direction: row;
+            text-align: left;
+        }
+
+        h1{
+            @include mainText;
+            font-size: rem(20px);
+            font-weight: bold;
+            color: $primary-color;
+            @media (min-width: $medium){
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-grow: 0.5;
+                padding-bottom: 40px;
+            } 
+        }
+
+        div{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            @media (min-width: $medium){
+                text-align: left;
+                margin-left: 4%;
+                margin-right: 4%;
+                margin-bottom: 40px;
+            } 
+            
+
+            a:first-child{
+                @include mainText;
+                font-size: rem(18px);
+                font-weight: bold;
+                text-decoration: none;
+                color: $primary-color;
+                @media (min-width: $medium){
+                    font-size: rem(16px);
+                } 
+            }
+
+            a{
+                @include mainText;
+                font-size: rem(14px);
+                text-decoration: none;
+                color: $secondary-text-color;
+                margin-top: 12px;
+                font-weight: 200;
+                @media (min-width: $medium){
+                    font-size: rem(12px);
+                    margin-top: 18px;
+                } 
+            }
+
+            .figures-container{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin-top: 10px;
+                margin-bottom: 0;
+                @media (min-width: $medium){
+                    margin: 0;
+                } 
+
+                figure{
+                    @media (min-width: $medium){
+                        margin-right: 40px;
+                        margin-left: 0;
+                        
+                    } 
+                }
+
+                img{
+                    width: 4.5vw;
+                    @media (min-width: $medium){
+                        width: 2vw;
+                    } 
+                }
+                
+            }
+            
+        
+
+        }
+    }
+
     p{
         @include mainText;
-        @include textSmall;
+        font-size: rem(14px);
         color: $secondary-text-color;
-    }    
+        margin-bottom: 40px;
+        text-align: center;
+        font-weight: 200;
+        @media (min-width: $medium){
+            font-size: rem(12px);
+        } 
+    }
+    
 }
