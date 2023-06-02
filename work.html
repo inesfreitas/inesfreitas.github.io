@@ -8,11 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</head>    <body>
+</head>
+
+
+<!-- NOMES DIFERENTS? -->    <body>
 
 <header>
     <div class="container">
-        <h1>inês freitas.</h1>
+        <h1><a href="index.html">inês freitas.</a></h1>
+        <button class="btn--toggle-menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>    
+        </button>
         <nav id="main-navigation">
                 <ul>
                 <li><a href="index.html">home.</a></li>
@@ -20,16 +26,43 @@
                 <li><a href="contacts.html">contacts.</a></li>
                 </ul>
             </nav> 
-            <!--hamburger aqui, e depois display none -->
-            <div class="hamburger-menu">
-                <hr>
-                <hr>
-                <hr>
-            </div>
+            
     </div>
     <hr>
 </header>        <main>
-            <h1>WORK</h1>
+            <div class="grid-container-work">
+                <section>
+
+                    <h2>work.</h2>
+                    <p>here are presented some of the projects I developed during my post-graduate degree in Digital Experience Design.</p>
+                </section>
+
+                <a href="projectfbaul.html">
+                    <figure>
+                        <img src="/assets/img/fbaul-site1.png" alt="">
+                    </figure>
+                    <article>
+                        <h3>rethinking fbaul’s website.</h3>
+                        <p>this project was developed in 2 months with a team of 3 designers, aiming to redesign fbaul’s website and rethink the user experience.</p>
+                        <div>
+                            <p>check it out here.</p>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="projectwhatsapp.html">
+                    <figure>
+                        <img src="/assets/img/whatsapp-feature1.png" alt="">
+                    </figure>
+                    <article>
+                        <h3>whatsapp: new feature.</h3>
+                        <p>this project was developed in 2 months with a team of 3 designers, aiming to create a new feature for whatsapp considering the user’s needs.</p>
+                        <div>
+                            <p>check it out here.</p>
+                        </div>
+                    </article>
+                </a>
+            </div>
         </main>
 <footer>
     <hr>
@@ -37,20 +70,20 @@
         <h1>inês freitas.</h1>
 
         <div>
-            <a href="#" class="footer-subtitle">home.</a>
-            <a href="#">about me</a>
-            <a href="#">my journey</a>
-            <a href="#">software skills</a>
+            <a href="index.html" class="footer-subtitle">home.</a>
+            <a href="#about-me">about me</a>
+            <a href="#my-journey">my journey</a>
+            <a href="#software-skills">software skills</a>
         </div>
 
         <div>
-            <a href="#" class="footer-subtitle">work.</a>
-            <a href="#">rethinking fbaul's website</a>
-            <a href="#">whatsapp new feature</a>
+            <a href="work.html" class="footer-subtitle">work.</a>
+            <a href="projectfbaul.html">rethinking fbaul's website</a>
+            <a href="projectwhatsapp.html">whatsapp new feature</a>
         </div>
 
         <div>
-            <a href="#" class="footer-subtitle">contacts.</a>
+            <a href="contacts.html" class="footer-subtitle">contacts.</a>
             <div class="figures-container">
                 <figure>
                     <img src="/assets/img/mail.svg" alt="">

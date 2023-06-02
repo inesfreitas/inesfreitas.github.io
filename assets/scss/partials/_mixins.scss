@@ -15,6 +15,12 @@
     line-height: 1.4;
 }
 
+@mixin subtitle-mobile{
+    font-size: rem(18px);
+    font-weight: bold;
+}
+
+
 @mixin title-mobile{
     font-size: rem(24px);
     font-weight: bold;
@@ -29,24 +35,48 @@
 
 
 @mixin textSmall-desktop{
-    font-size: rem(16px);
+    font-size: rem(12px);
 }
 
 @mixin bodyText-desktop{
-    font-size: rem(21px);
+    font-size: rem(14px);
     line-height: 1.4;
 }
 
+@mixin subtitle-desktop{
+    font-size: rem(24px);
+    font-weight: bold;
+}
+
 @mixin title-desktop{
-    font-size: rem(46px);
+    font-size: rem(32px);
     font-weight: bold;
 }
 
 @mixin textNav-desktop{
-    font-size: rem(26);
+    font-size: rem(24px);
 }
 
 @mixin titleName-desktop {
-    font-size: rem(40px);
+    font-size: rem(30px);
     font-weight: bold;
+}
+
+
+
+
+
+
+//----------------------------------GRID
+@mixin grid{
+    width: 94%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 16px;
+    @media (min-width: $medium){
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 24px;
+    }
+    
+
 }

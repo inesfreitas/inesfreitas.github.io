@@ -6,199 +6,37 @@
  "partials/header",
  "partials/layout",
  "partials/footer",
- "partials/animations"
+ "partials/animations",
+
+ "partials/home",
+ "partials/work",
+ "partials/projectfbaul",
+ "partials/projectwhatsapp",
+ "partials/contacts"
  ;
 
 
- //-------------------------------------------------------------------------------HOME
-.grid-container{
+ h2{
+    @include mainText;
+    @include title-mobile;
+    color: $primary-color;
 
-    h2{
-        @include mainText;
-        @include title-mobile;
-        color: $primary-color;
-    }
-    p{
-        @include mainText;
-        @include bodyText-mobile;
-        color: $secondary-text-color;
-        margin-top: 20px;
-    }
-
-
-    .about-me{
-        margin-top: 20px;
-        grid-area: 1/1/1/span 4 ;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        figure{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            img{
-                width: 60%;
-            }
-        }
-        
-    }
-
-    .my-journey{
-        grid-area: 2/1/2/span 4;
-
-        article{
-            display: flex;
-
-            figure{
-                display: inline-block;
-                margin: 0;
-                .line{
-                    height: 420px;
-                }
-            }
-
-            ul{
-                margin-left: 20px;
-                margin-top: 4vw;
-                padding: 0;
-
-                li{
-                    margin-bottom: 40px;
-                    list-style: none;
-
-                    div{
-                        display: flex;
-                        align-items: first baseline;
-
-                        .dot{
-                            position: relative;
-                            left:-26px;
-                            width: 10px;
-                        }
-                    }
-
-                    h3{
-                        @include mainText;
-                        @include bodyText-mobile;
-                        font-weight: bold;
-                        color: $secondary-text-color;
-                        margin: 0;
-                        margin-left: -10px;
-                    }
-
-                    .dates{
-                        @include mainText;
-                        @include textSmall-mobile;
-                        color: $subtitle-text-color;
-                        margin: 0;
-                    }
-
-                    p{
-                        @include mainText;
-                        @include bodyText-mobile;
-                        color: $secondary-text-color;
-                        margin: 0;
-                    }
-                }
-            }
-        }    
-    }
-
-    .software-skills{
-        grid-area: 3/1/3/span 4;
-        article{
-            display: flex;
-
-            div{
-                &.software-container1{
-                    width: 45%;
-                    margin-right: 10%;
-                    position: relative;
-                    hr{
-                        margin-top: 18px;
-                        &:nth-of-type(1){
-                            height: 2px;
-                            background-image: linear-gradient(to right, $primary-color 90%, $secondary-text-color 0%);
-                            border: 0;
-                        }
-                        &:nth-of-type(2){
-                            height: 2px;
-                            background-image: linear-gradient(to right, $primary-color 70%, $secondary-text-color 0%);
-                            border: 0;
-                        }
-                        &:nth-of-type(3){
-                            height: 2px;
-                            background-image: linear-gradient(to right, $primary-color 75%, $secondary-text-color 0%);
-                            border: 0;
-                        }
-                    }
-                    .purple-dot{
-                        position: absolute;
-                        &:nth-of-type(1){
-                            left: 90%;
-                        }
-                        &:nth-of-type(2){
-                            left: 70%;
-                        }
-                        &:nth-of-type(3){
-                            left: 75%;
-                        }
-
-                    }
-                }
-                &.software-container2{
-                    position: relative;
-                    width: 45%;
-                    hr{
-                        margin-top: 18px;
-                        &:nth-of-type(1){
-                            height: 2px;
-                            background-image: linear-gradient(to right, $primary-color 90%, $secondary-text-color 0%);
-                            border: 0;
-                        }
-                        &:nth-of-type(2){
-                            height: 2px;
-                            background-image: linear-gradient(to right, $primary-color 55%, $secondary-text-color 0%);
-                            border: 0;
-                        }
-                        &:nth-of-type(3){
-                            height: 2px;
-                            background-image: linear-gradient(to right, $primary-color 65%, $secondary-text-color 0%);
-                            border: 0;
-                        }
-                    }
-
-                    .purple-dot{
-                        position: absolute;
-                        &:nth-of-type(1){
-                            left: 90%;
-                        }
-                        &:nth-of-type(2){
-                            left: 55%;
-                        }
-                        &:nth-of-type(3){
-                            left: 65%;
-                        }
-
-                    }
-                }
-                
-
-            }
-        }
-    }
-
-    .links{
-        grid-area: 4/1/4/span 4;
-        height: 20px;
-        h2{
-            color: $secondary-text-color;
-            margin-bottom: 100px;
-        }
-        a{
-            color: $primary-color;
-            text-decoration: none;
-        }
+    @media (min-width: $medium){
+        @include title-desktop;
     }
 }
+p{
+    @include mainText;
+    @include bodyText-mobile;
+    color: $secondary-text-color;
+    margin-top: 20px;
+
+    @media (min-width: $medium){
+        @include bodyText-desktop;
+    }
+}
+
+
+
+
+

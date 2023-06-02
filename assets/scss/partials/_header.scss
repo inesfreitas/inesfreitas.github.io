@@ -8,7 +8,7 @@ header{
         flex-direction: row;
         @media (min-width: $medium){
             height: rem(90px);
-            align-items:first baseline;
+            align-items:center;
         }
 
         h1{
@@ -18,29 +18,74 @@ header{
             flex-grow: 1;
             @media (min-width: $medium){
                 @include titleName-desktop;
+                margin: 0;
+
+            }
+
+            a{
+                text-decoration: none;
+                color: $primary-color;
             }
         }
 
-        .hamburger-menu{
-            width: 32px;
-            hr{
-                border: 2px solid $primary-color;
-                margin-top: 8px;
-            }
-            @media (min-width: $medium){
-                display: none;
-
-            }
-        }
-
-        nav{
+        
+        #main-navigation{
             display: none;
             @media (min-width: $medium){
                 display: block;
 
             }
+            &.menu-is-open{
+                display: block;
+                position: absolute;
+                background-color: $background-color-opacity;
+                top: 88px;
+                left: 0;
+                width: 100%;
+                ul{
+                    flex-direction: column;
+                    padding: 24px 16px;
+
+                    li{
+                        text-align: right;
+                    }
+                }
+                @media (min-width: $medium){
+                    display: block;
+                    position: static;
+                    background: transparent;
+                    width: auto;
+                    ul{
+                        flex-direction: row;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+
+        .btn--toggle-menu{
+            background: transparent;
+            border: none;
+            display: flex;
+            cursor: pointer;
+            padding: 0;
+
+            @media (min-width: $medium){
+                display: none;
+            }
+
+            svg{
+                stroke: $primary-color;
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        nav{
+            
             ul{
                 display: flex;
+                margin: 0;
                 li{
                     list-style: none;
                     margin: 10px;
@@ -60,12 +105,9 @@ header{
     }
 
     hr{
-        border: 2.5px solid $primary-color;
+        border: 1.4px solid $primary-color;
         margin: 0 auto 0 auto;
         display: block;
-        @media (min-width: $large){
-            border: 1.6px solid $primary-color;
-        }
      }
 
 }
