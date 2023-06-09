@@ -2,7 +2,7 @@ footer{
 
     hr{
         border: 0.6px solid $secondary-text-color;
-        margin-bottom: 30px;
+        margin-bottom: 4%;
         width: 95%;
     }
     
@@ -34,12 +34,11 @@ footer{
         div{
             display: flex;
             flex-direction: column;
-            margin-bottom: 20px;
+            margin-bottom: 4%;
             @media (min-width: $medium){
                 text-align: left;
                 margin-left: 4%;
                 margin-right: 4%;
-                margin-bottom: 40px;
             } 
             
 
@@ -59,7 +58,7 @@ footer{
                 font-size: rem(14px);
                 text-decoration: none;
                 color: $secondary-text-color;
-                margin-top: 12px;
+                margin-top: 3%;
                 font-weight: 200;
                 @media (min-width: $medium){
                     font-size: rem(12px);
@@ -72,18 +71,20 @@ footer{
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                margin-top: 10px;
-                margin-bottom: 0;
-                @media (min-width: $medium){
-                    margin: 0;
-                } 
+                margin: 0;
 
-                figure{
+                a{
+                    margin-right: 4%;
+                    margin-left: 4%;
                     @media (min-width: $medium){
                         margin-right: 40px;
                         margin-left: 0;
                         
                     } 
+
+                    figure{
+                        margin: 0;
+                    }
                 }
 
                 img{
@@ -104,7 +105,7 @@ footer{
         @include mainText;
         font-size: rem(14px);
         color: $secondary-text-color;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         text-align: center;
         font-weight: 200;
         @media (min-width: $medium){

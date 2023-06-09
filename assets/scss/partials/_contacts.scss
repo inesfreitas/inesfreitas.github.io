@@ -1,12 +1,15 @@
 //-------------------------------------------------------------------------------------------------------CONTACTS
-.grid-container-contacts{
+.contacts{
     @include grid;
+    align-items: first baseline;
 
     section {
         grid-column: 1/span 4;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        
+        margin-top: 10%;
         h2{
             margin-bottom: 0;
         }
@@ -16,7 +19,7 @@
         }
 
         @media (min-width: $medium){
-            grid-column: 3/span 8;
+            grid-column: 2/span 10;
         }
     }
 
@@ -26,14 +29,17 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        @media (min-width: $medium){
-            align-items: start;
-        }
+        text-align: center;
 
         p{
             margin: 0 0 4px 0;
             &:first-of-type{
                 font-weight: bold;
+            }
+            @media (min-width: $medium){
+                width: 100%;
+                word-wrap: break-word;
+                margin: 0 0 16px 0;
             }
         }
 
@@ -44,15 +50,15 @@
             @media (min-width: $medium){
                 margin-left: 0;
                 margin-right: 0;
-                justify-content: start;
+                justify-content: center;
             }
 
             img{
                 width: 50%;
                 margin-left: 16px ;
                 @media (min-width: $medium){
-                    margin-left: 0;
                     width: 60%;
+                    height: auto;
                 }
             }
         }
@@ -60,25 +66,21 @@
         &.mail{
             grid-column: 1/span 4;
             @media (min-width: $medium){
-                grid-column: 3/span 8;
+                grid-column: 2/span 3;
             }
         }
     
         &.linkedin{
             grid-column: 1/span 4;
             @media (min-width: $medium){
-                grid-column: 3/span 8;
-                align-items: end;
-                figure{
-                    justify-content: end;
-                }
+                grid-column: 5/span 3;
             }
         }
     
         &.behance{
             grid-column: 1/span 4;
             @media (min-width: $medium){
-                grid-column: 3/span 8;
+                grid-column: 8/span 3;
             }
         }
 

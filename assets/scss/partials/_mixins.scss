@@ -73,7 +73,11 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 16px;
+    row-gap: 100px;
+    margin-top: 80px;
+    margin-bottom: 12%;
     @media (min-width: $medium){
+        width: 100%;
         grid-template-columns: repeat(12, 1fr);
         column-gap: 24px;
     }
