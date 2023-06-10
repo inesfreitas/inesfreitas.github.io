@@ -9,7 +9,8 @@
 var anchor = document.querySelector("#main-navigation").querySelectorAll("a");
 
 for( var i = 0; i < anchor.length; i++){
-    if(window.location.href == anchor[i].href) {
+    if(window.location.href == anchor[i].href
+        || (anchor[i].pathname == "/work.html" && window.location.pathname.substring(1,8) == "project")) {
         anchor[i].classList.add("active");
     }
 

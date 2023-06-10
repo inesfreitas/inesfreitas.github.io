@@ -1,6 +1,8 @@
 //-------------------------------------------------------------------------------------------------------HOME
 .home{
     @include grid;
+    align-items: first baseline;
+    
 
     section{
         scroll-margin-top: 80px;
@@ -17,7 +19,7 @@
         @media (min-width: $medium){
             grid-column: 2/12;
             flex-direction: row;
-            justify-content: flex-start;
+            justify-content: space-between;
             align-items: flex-start;
             margin-top: 12%;
         }
@@ -26,12 +28,43 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
 
             @media (min-width: $medium){
-                justify-content: end;
+                justify-content: center;
                 order: 1;
                 margin: 0;
                 width: 45%;
+            }
+
+            svg{
+                position: absolute;
+                width: 44vw;
+                transition-duration: 1s;
+                
+
+                @media (min-width: $medium){
+                    width: 31vw;
+                    max-width: 330px;
+                }
+
+                circle{
+                    transform-origin: center;
+                    animation-name: rotate-loop;
+                    animation-duration: 1.5s;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                }
+
+                @keyframes rotate-loop {
+                    from{rotate: 0deg;}
+                    to{rotate: 360deg;}
+                }
+
+                &:hover{
+                    animation-play-state: paused;
+                    transform: scale(105%);
+                }
             }
 
             img{

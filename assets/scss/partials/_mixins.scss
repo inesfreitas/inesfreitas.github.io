@@ -69,17 +69,19 @@
 
 //----------------------------------GRID
 @mixin grid{
-    width: 94%;
+    width: fit-content;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 16px;
     row-gap: 100px;
     margin-top: 80px;
     margin-bottom: 12%;
+    padding: 0 16px;
     @media (min-width: $medium){
         width: 100%;
         grid-template-columns: repeat(12, 1fr);
         column-gap: 24px;
+        padding: 0;
     }
     
 
