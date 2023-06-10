@@ -54,6 +54,8 @@
                     animation-duration: 1.5s;
                     animation-timing-function: linear;
                     animation-iteration-count: infinite;
+                    
+                    
                 }
 
                 @keyframes rotate-loop {
@@ -61,8 +63,7 @@
                     to{rotate: 360deg;}
                 }
 
-                &:hover{
-                    animation-play-state: paused;
+                &:hover{ 
                     transform: scale(105%);
                 }
             }
@@ -288,6 +289,7 @@
         h2{
             color: $secondary-text-color;
             margin-bottom: 12%;
+            
             &:last-of-type{
                 margin-top: 0;
             }
