@@ -11,6 +11,7 @@
         justify-content: center;
         padding: 0 16px;
         margin-top: 10%;
+
         h2{
             margin-bottom: 0;
         }
@@ -26,10 +27,9 @@
     }
 
     a{
-        
+        grid-column: 1/span 4;
         padding: 16px 16px;
         text-decoration: none;
-        grid-column: 1/span 4;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -38,7 +38,6 @@
         background-size: cover;
         background-position: center;
         transition: all 1s;
-        
 
         @media (min-width: $medium){
             grid-column: 1/span 12;
@@ -52,7 +51,6 @@
         &:hover{
             @media (min-width: $medium){
                 background-size: 160%;
-                background-position: center;
             }
         }
         
@@ -69,9 +67,6 @@
         }
         
         h3{
-            @include mainText;
-            @include subtitle-mobile;
-            color: $secondary-text-color;
             margin: 0;
             width: 100%;
 
@@ -85,16 +80,15 @@
             margin: 0;
             display: flex;
             justify-content: center;
+
             @media (min-width: $medium){
                 width: 50%;
             }
 
-
-            
-
             img{
                 width: 100%;
                 max-width: 400px;
+
                 @media (min-width: $medium){
                     max-width:none;
                     object-fit: contain;

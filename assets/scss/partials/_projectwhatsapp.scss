@@ -4,19 +4,21 @@
     h2{
         @include title-mobile;
         color: $secondary-text-color;
-        
+        @media (min-width: $medium){
+            @include title-desktop;
+        }
     }
 
-
     figure{
-
         display: flex;
         justify-content: center;
         grid-column: 1 / span 4;
         margin: 0;
+
         img{
             width: 100%;
             max-width: 500px;
+
             @media (min-width: $medium){
                 max-width: none; 
                 height: fit-content;
@@ -25,6 +27,7 @@
 
         &:nth-of-type(1){
             order: 5;
+
             @media (min-width: $medium){
                 grid-column: 7/span 5;
             }
@@ -32,6 +35,7 @@
 
         &:nth-of-type(2){
             order: 7;
+
             @media (min-width: $medium){
                 grid-column: 7/span 5;
             }
@@ -39,6 +43,7 @@
 
         &:nth-of-type(3){
             order: 8;
+
             @media (min-width: $medium){
                 grid-column: 2/span 5; 
             }
@@ -46,6 +51,7 @@
 
         &:nth-of-type(4){
             order: 10;
+
             @media (min-width: $medium){
                 grid-column: 2/span 5;
             }
@@ -53,6 +59,7 @@
 
         &:nth-of-type(5){
             order: 11;
+
             @media (min-width: $medium){
                 grid-column: 7/span 5;
             }
@@ -66,7 +73,6 @@
         &:nth-of-type(1){
             grid-column: 1/span 4;
             order: 1;
-    
     
             @media (min-width: $medium){
                 grid-column: 2/span 10; 
@@ -121,6 +127,7 @@
         &:nth-of-type(6){
             grid-column: 1/span 4;
             order: 12;
+
             @media (min-width: $medium){
                 grid-column: 2/span 5;
             }
@@ -142,6 +149,7 @@
         &:nth-of-type(7){
             grid-column: 1/span 4;
             order: 13;
+
             @media (min-width: $medium){
                 grid-column: 7/span 5;
                 
@@ -152,13 +160,11 @@
         &:nth-of-type(8){
             grid-column: 1/span 4;
             order: 14;
+
             @media (min-width: $medium){
                 grid-column: 2/ span 10; 
             }
         }
-
-
-     
     }
 
     div{
@@ -182,9 +188,6 @@
 
 
     h3{
-        @include mainText;
-        @include subtitle-mobile;
-        color: $secondary-text-color;
 
         &.case-study-link{
             grid-column: 1/span 4;
@@ -202,6 +205,7 @@
                 color: $primary-color;
                 text-decoration: none;
                 white-space: nowrap;
+
                 &:before{
                     content: "case study.";
                     position: absolute;
@@ -211,10 +215,12 @@
                     transition: all 0.6s;
                 }
     
-                &:hover:before{
-                    width: 50%;
-                    @media (min-width: $medium){
-                        width: 20%;
+                &:hover{
+                    &:before{
+                        width: 50%;
+                        @media (min-width: $medium){
+                            width: 20%;
+                        }
                     }
                 }
             }

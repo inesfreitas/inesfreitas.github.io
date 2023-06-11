@@ -5,13 +5,13 @@ footer{
         margin-bottom: 4%;
         width: 95%;
     }
-    
-    
+
     .container{
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: center;
+
         @media (min-width: $medium){
             flex-direction: row;
             text-align: left;
@@ -22,6 +22,7 @@ footer{
             font-size: rem(20px);
             font-weight: bold;
             color: $primary-color;
+
             @media (min-width: $medium){
                 display: flex;
                 align-items: center;
@@ -35,12 +36,12 @@ footer{
             display: flex;
             flex-direction: column;
             margin-bottom: 4%;
+
             @media (min-width: $medium){
                 text-align: left;
                 margin-left: 4%;
                 margin-right: 4%;
             } 
-            
 
             a:first-child{
                 @include mainText;
@@ -48,11 +49,12 @@ footer{
                 font-weight: bold;
                 text-decoration: none;
                 color: $primary-color;
+                white-space: nowrap;
+
                 @media (min-width: $medium){
                     font-size: rem(16px);
                 } 
 
-                white-space: nowrap;
                 &:before{
                     text-align: left;
                     position: absolute;
@@ -69,8 +71,6 @@ footer{
         
                     }
                 }
-
-                
             }
 
             .homefooter{
@@ -91,9 +91,6 @@ footer{
                 }
             }
 
-
-            
-
             a{
                 @include mainText;
                 font-size: rem(14px);
@@ -103,6 +100,7 @@ footer{
                 font-weight: 200;
                 opacity: 100%;
                 transition: all 0.4s;
+
                 @media (min-width: $medium){
                     font-size: rem(12px);
                     margin-top: 18px;
@@ -119,17 +117,16 @@ footer{
                 justify-content: center;
                 align-items: center;
                 margin: 0;
-                
 
                 a{
                     margin-right: 4%;
                     margin-left: 4%;
                     opacity: 100%;
                     transition: all 0.4s;
+
                     @media (min-width: $medium){
                         margin-right: 40px;
                         margin-left: 0;
-                        
                     } 
 
                     figure{
@@ -143,15 +140,12 @@ footer{
 
                 img{
                     width: 4.5vw;
+
                     @media (min-width: $medium){
                         width: 2vw;
                     } 
                 }
-                
             }
-            
-        
-
         }
     }
 
@@ -162,6 +156,7 @@ footer{
         margin-bottom: 20px;
         text-align: center;
         font-weight: 200;
+        
         @media (min-width: $medium){
             font-size: rem(12px);
         } 

@@ -1,29 +1,19 @@
 
 
-/*for (var i = 1; i<9; i++ ){
-    console.log( "Exercício 1 Repetição " + i + " blabla");
-};*/
-
+//----CHANGE MENU CLASS WHEN SELECTED----
 
 
 var anchor = document.querySelector("#main-navigation").querySelectorAll("a");
 
 for( var i = 0; i < anchor.length; i++){
-    if(window.location.href == anchor[i].href
-        || (anchor[i].pathname == "/work.html" && window.location.pathname.substring(1,8) == "project")) {
+    if(window.location.href == anchor[i].href || (anchor[i].pathname == "/work.html" && window.location.pathname.substring(1,8) == "project")) {
         anchor[i].classList.add("active");
     }
-
-    /*if(window.location.href.indexOf("work") > -1) {
-        console.log("estou na página work")
-        document.body.classList.add("work")
-    } else if (window.location.href.indexOf("contacts") > -1){
-        document.body.classList.add("contacts")
-    } else {
-    document.body.classList.add("home")
-}*/
 }
 
+
+
+//----MENU HAMBURGER TOGGLE----
 
 var btnToggleMenu = document.querySelector(".btn--toggle-menu");
 
@@ -31,11 +21,12 @@ function toggleMenu(){
     var mainNav = document.querySelector("#main-navigation");
     mainNav.classList.toggle("menu-is-open");
 }
+
 btnToggleMenu.addEventListener("click", toggleMenu);
 
 
 
-
+//----HOMEPAGE WORK AND CONTACT LINKS SHOWING ON SCROLL----
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {

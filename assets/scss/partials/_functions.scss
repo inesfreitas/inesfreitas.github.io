@@ -1,7 +1,4 @@
-@function ratio($width, $height) {
-    $division: $height / $width;
-    @return percentage($division);
-}
+//----PX TO REM FUNCTION----
 
 $html-font-size: 16px;
 @function stripUnit($value) {

@@ -7,7 +7,6 @@
  "partials/layout",
  "partials/footer",
  "partials/animations",
-
  "partials/home",
  "partials/work",
  "partials/projectfbaul",
@@ -16,7 +15,9 @@
  ;
 
 
- h2{
+//----GENERAL TEXT STYLES----
+
+h2{
     @include mainText;
     @include title-mobile;
     color: $primary-color;
@@ -25,6 +26,13 @@
         @include title-desktop;
     }
 }
+
+h3{
+    @include mainText;
+    @include subtitle-mobile;
+    color: $secondary-text-color;
+}
+
 p{
     @include mainText;
     @include bodyText-mobile;
@@ -35,6 +43,8 @@ p{
         @include bodyText-desktop;
     }
 }
+
+//----SCROLLBAR STYLE----
 
 ::-webkit-scrollbar {
     height: 6px;
@@ -54,6 +64,7 @@ p{
     background-color: #ffffff34; 
 }
 
+//----SELECTION STYLE----
 
 ::selection{
     background: #8f11c570;
