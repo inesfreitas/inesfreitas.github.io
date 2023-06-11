@@ -1,7 +1,7 @@
 //-------------------------------------------------------------------------------------------------------WORK
 .work{
     @include grid;
-    width: 100%;
+    padding: 0;
 
 
     section{
@@ -36,12 +36,24 @@
         background-image: url(/assets/img/bg-lines.png);
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
+        transition: all 1s;
+        
 
         @media (min-width: $medium){
             grid-column: 1/span 12;
             padding: 5% 8%;
             flex-direction: row;
             align-items: center;
+            background-size: 130%;
+            
+        }
+        
+        &:hover{
+            @media (min-width: $medium){
+                background-size: 160%;
+                background-position: center;
+            }
         }
         
         
@@ -102,9 +114,32 @@
             width:fit-content;
             margin: 0 0 8px 0;
             cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
             @media (min-width: $medium){
                 margin: 16px 0 12px 0;
             }
+
+            &:before{
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: calc(-500%);
+                width: 100%;
+                height: 500%;
+                border-radius: 5000px;
+                background-color: $primary-color;
+                transition: 0.5s;
+                z-index: -1;
+                }
+
+                &:hover {
+                    &:before {
+                        bottom: -240%;
+                    }
+                    color: $secondary-text-color;
+                }
         }
     }
 

@@ -36,3 +36,22 @@ btnToggleMenu.addEventListener("click", toggleMenu);
 
 
 
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const links = entry.target.querySelector('.links');
+  
+      if (entry.isIntersecting) {
+        links.classList.add('linkanimation');
+        return; 
+      }
+  
+      links.classList.remove('linkanimation');
+    });
+  });
+  
+  observer.observe(document.querySelector('.linkscontainer'));
+  
+
+
+

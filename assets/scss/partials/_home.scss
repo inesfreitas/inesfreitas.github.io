@@ -232,6 +232,8 @@
 
                     }
                 }
+
+                
                 &.software-container2{
                     position: relative;
                     width: 45%;
@@ -276,7 +278,7 @@
         }
     }
 
-    .links{
+    .linkscontainer{
         grid-column: 1/span 4;
 
         @media (min-width: $medium){
@@ -297,6 +299,63 @@
         a{
             color: $primary-color;
             text-decoration: none;
+            white-space: nowrap;
+        }
+        .homepage-work-link{
+            &:before{
+                
+                content: "work.";
+                position: absolute;
+                color: $hover-opacity-color;
+                width: 0%;
+                overflow: hidden;
+                transition: all 0.6s;
+            }
+
+            &:hover:before{
+                width: 30%;
+                @media (min-width: $medium){
+                    width: 20%;
+                }
+            }
+        }
+
+        .homepage-contacts-link{
+            &:before{
+                content: "contacts.";
+                position: absolute;
+                color: $hover-opacity-color;
+                width: 0%;
+                overflow: hidden;
+                transition: all 0.6s;
+            }
+
+            &:hover:before{
+                width: 40%;
+                @media (min-width: $medium){
+                    width: 30%;
+                }
+            }
+        }
+        
+
+    }
+
+    .linkanimation{
+        animation-name: slidein;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-out;
+    }
+
+    @keyframes slidein {
+        from{
+            transform: translateX(-50px);
+            opacity: 0%;
+        }
+        to{
+            transform: translateX(0px);
+            opacity: 100%;
         }
     }
 }

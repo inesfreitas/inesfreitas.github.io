@@ -30,6 +30,19 @@
         align-items: center;
         justify-content: center;
         text-align: center;
+        opacity: 100%;
+
+
+        &:hover :not(p:last-of-type){
+            opacity: 80%;
+        }
+
+        &:hover{
+            p:last-of-type{
+                color: $primary-color;
+                text-decoration: underline ;
+            }
+        }
 
         p{
             margin: 0 0 4px 0;
@@ -68,6 +81,7 @@
             @media (min-width: $medium){
                 grid-column: 2/span 3;
             }
+
         }
     
         &.linkedin{

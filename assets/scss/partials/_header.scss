@@ -4,7 +4,7 @@ header{
     top: 0;
     width: 100%;
     left: 0;
-    z-index: 1;
+    z-index: 2;
 
     .container{
         background-color: $background-color;
@@ -32,7 +32,27 @@ header{
             a{
                 text-decoration: none;
                 color: $primary-color;
+                
+                &:before{
+                    content: "inês freitas.";
+                    white-space: nowrap;
+                    position: absolute;
+                    color: $hover-opacity-color;
+                    width: 0%;
+                    overflow: hidden;
+                    transition: all 0.5s ease-in;
+                }
+
+                &:hover:before{
+                    width: 70%;
+                    @media (min-width: $medium){
+                        width: 30%;
+        
+                    }
+                }
+                
             }
+
         }
 
         
@@ -81,11 +101,26 @@ header{
                 display: none;
             }
 
+            
             svg{
                 stroke: $primary-color;
                 width: 32px;
                 height: 32px;
+                transition: all 0.5s ease-in-out;
+
+                
+
             }
+
+            &:hover{
+                svg{
+                    stroke: #8f11c5a6;
+                }
+            }
+
+
+            
+
         }
 
         nav{
@@ -101,11 +136,72 @@ header{
                         @include textNav-desktop;
                         color: $primary-color;
                         text-decoration: none;
+                        white-space: nowrap;
                         &.active{
                             font-weight: bolder;
-                            //text-decoration: underline;
+                        }
+
+                    }
+
+                    .homelink{
+                        &:before{
+                            content: "home.";
+                            text-align: left;
+                            position: absolute;
+                            color: $hover-opacity-color;
+                            width: 0%;
+                            overflow: hidden;
+                            transition: all 0.6s;
+                        }
+
+                        &:hover:before{
+                            width: 40%;
+                            @media (min-width: $medium){
+                                width: 11%;
+                
+                            }
                         }
                     }
+
+                    .worklink{
+                        &:before{
+                            content: "work.";
+                            text-align: left;
+                            position: absolute;
+                            color: $hover-opacity-color;
+                            width: 0%;
+                            overflow: hidden;
+                            transition: all 0.6s;
+                        }
+
+                        &:hover:before{
+                            width: 40%;
+                            @media (min-width: $large){
+                                width: 9%;
+                
+                            }
+                        }
+                    }
+
+                    .contactslink{
+                        &:before{
+                            content: "contacts.";
+                            text-align: left;
+                            position: absolute;
+                            color: $hover-opacity-color;
+                            width: 0%;
+                            overflow: hidden;
+                            transition: all 0.6s;
+                        }
+
+                        &:hover:before{
+                            width: 40%;
+                            @media (min-width: $large){
+                                width: 26%;
+                            }
+                        }
+                    }
+        
                 }
             }
         }
